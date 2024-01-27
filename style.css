@@ -1,0 +1,45 @@
+.Header{
+    display: flex;
+}
+
+.Header img{
+    margin-right: 80px;
+}
+
+.logo{
+    height:100px;
+}
+
+.Links a{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 24px;
+    text-decoration: none;
+    color: blue;
+    height: 50px;
+}
+
+.product{
+    height:200px;
+    width: 200px;
+}
+
+.Info{
+    top:0;
+    width:200px;
+}
+
+
+.table{
+    border:1px solid black;
+}
+
+.table td{
+    border:1px solid black;
+    width:300px
+}
+
+.review{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
