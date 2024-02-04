@@ -42,4 +42,30 @@
 .review{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: left; /
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-link {
+    display: block;
+    text-align: left; /* Align the sign-up link to the left */
+    margin-top: 10px;
+}
 
