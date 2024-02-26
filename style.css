@@ -239,3 +239,123 @@
     /* Align the sign-up link to the left */
     margin-top: 10px;
 }
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.about-description {
+    background: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-method {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(50% - 20px); /* Two columns, considering gap */
+    max-width: 300px; /* Limiting maximum width */
+    margin-bottom: 20px;
+}
+
+.contact-method h2 {
+    margin-bottom: 10px;
+}
+
+.contact-method p {
+    margin: 0;
+}
+
+.contact-method a {
+    color: #007BFF;
+}
+
+.contact-method a:hover {
+    color: #0056b3;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Login Form Section */
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Adjust height as needed */
+}
+
+.login-form form {
+    background-color: #ddd;
+    padding: 100px 200%; /* Adjust the left and right padding */
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 80%; /* Adjust width as needed */
+}
+
+
+.login-form label {
+    display: block;
+    margin-bottom: 10px; /* Adjust margin as needed */
+    text-align: left; /* Align labels to the left */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 290%; /* Adjust the width as needed */
+    max-width: 300px; /* Set a maximum width if necessary */
+}
+.login-form button {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+.signup-link {
+    text-align: left; /* Align the link to the left */
+    margin-top: 10px; /* Adjust top margin as needed */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.signup-link a {
+    color: #007BFF; /* Set link color to blue */
+    text-decoration: none; /* Remove default underline */
+}
+
+.signup-link a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
