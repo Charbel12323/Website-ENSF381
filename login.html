@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,13 @@
     <link rel="shortcut icon" href="Logo image.jpg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="Header">
         <img class="logo" src="Logo image.jpg" alt="Logo">
         <h1>The whistlers</h1>
     </header>
-    
+
     <div class="Links">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
@@ -21,23 +23,31 @@
     </div>
 
     <!-- Login Form -->
-    <div class="login-form text-content"> <!-- Added text-content class here -->
+    <div class="login-form"> <!-- Added text-content class here -->
         <form>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required placeholder="Enter your username">
-    
+
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required placeholder="Enter your password">
-    
+
             <p class="signup-link"><a href="signup.html">Don't have an account? Sign up here</a></p>
-    
-            <button type="submit">Login</button>
+
+            <button type="submit" id="button">Login</button>
         </form>
     </div>
-    
+
+    <!-- Message Box Placeholder -->
+    <div id="messageBox" style="display: none;">
+        <p id="message"></p>
+    </div>
+
+
     <footer>
         <h2>Copyright issue Charbel and Gisa 2024</h2>
         <!-- Copyright notice goes here -->
     </footer>
+    <script src="j.js"></script>
 </body>
+
 </html>
