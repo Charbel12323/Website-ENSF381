@@ -90,3 +90,75 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".signup-form form");
+    const usernameInput = document.getElementById("signup-username");
+    const passwordInput = document.getElementById("signup-password");
+    const confirmPasswordInput = document.getElementById("confirm-password");
+    const emailInput = document.getElementById("email");
+    const signupButton = document.getElementById("signup-button");
+    const messageBox = document.getElementById("messageBox");
+    const message = document.getElementById("message");
+
+    // Function to display messages
+    const showMessage = (msg, isSuccess) => {
+        message.textContent = msg;
+        messageBox.style.display = "block";
+        messageBox.className = isSuccess ? 'success' : 'error';
+    };
+
+    // Function to hide messages
+    const hideMessage = () => {
+        messageBox.style.display = "none";
+    };
+
+    // Function to validate username
+    const validateUsername = () => {
+        const username = usernameInput.value;
+        const regex = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/; // Username pattern
+        return regex.test(username);
+    };
+
+    // Function to validate password
+    const validatePassword = () => {
+        const password = passwordInput.value;
+        // Password pattern
+        const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~])[A-Za-z\d!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~]{8,}$/;
+        return regex.test(password);
+    };
+
+    // Function to validate email
+    const validateEmail = () => {
+        const email = emailInput.value;
+        // Email pattern
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    };
+
+    // Function to validate confirm password
+    const validateConfirmPassword = () => {
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+        return password === confirmPassword;
+    };
+
+    // Event listener for form submission
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+
+        hideMessage(); // Hide any previous message
+
+        // Check validation conditions
+        const isValidUsername = validateUsername();
+        const isValidPassword = validatePassword();
+        const isValidConfirmPassword = validateConfirmPassword();
+        const isValidEmail = validateEmail();
+
+        if (!isValidUsername || !isValidPassword || !isValidConfirmPassword || !isValidEmail) {
+            showMessage("Invalid input. Please check your inputs and try again.", false);
+        } else {
+            showMessage("Signup successful!", true);
+            // Additional logic for submitting the form can go here
+        }
+    });
+});
